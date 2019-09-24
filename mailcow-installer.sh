@@ -32,7 +32,7 @@ function grayMessage() {
 	yellowMessage "        YouTube: https://youtube.com/c/MinenIntros          "
     kekMessage "#/////////////////////////////////////////////////////#"
     yellowMessage "      Mailcow Installer by MinenIntros Systems       "
-    yellowMessage "        Version 0.2 - Testing - for Debian 9         "
+    yellowMessage "        Version 1.0 - Stable - for Debian 9          "
 	kekMessage "#/////////////////////////////////////////////////////#"
     sleep 3.0
 
