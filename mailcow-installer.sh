@@ -34,6 +34,8 @@ function grayMessage() {
     yellowMessage "      Mailcow Installer by MinenIntros Systems       "
     yellowMessage "        Version 1.0 - Stable - for Debian 9          "
 	kekMessage "#/////////////////////////////////////////////////////#"
+    magentaMessage "Warning: Currently there are errors with Hetzner Cloud Server!"
+    kekMessage "#/////////////////////////////////////////////////////#"
     sleep 3.0
 
 
