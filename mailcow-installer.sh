@@ -32,7 +32,7 @@ function grayMessage() {
 	yellowMessage "        YouTube: https://youtube.com/c/MinenIntros          "
     kekMessage "#/////////////////////////////////////////////////////#"
     yellowMessage "      Mailcow Installer by MinenIntros Systems       "
-    yellowMessage "        Version 1.0 - Stable - for Debian 9          "
+    yellowMessage "        Version 1.1 - Stable - for Debian 9          "
 	kekMessage "#/////////////////////////////////////////////////////#"
     magentaMessage "Warning: Currently there are errors with Hetzner Cloud Server!"
     kekMessage "#/////////////////////////////////////////////////////#"
@@ -43,7 +43,8 @@ function grayMessage() {
     whiteMessage "______________________________________________________"
     echo ""
     magentaMessage "1.  Starte Installer"
-    magentaMessage "2.  Verlasse Installer"
+    magentaMessage "2.  Starte Uninstaller"
+    magentaMessage "3.  Verlasse Installer"
     echo ""
     whiteMessage "______________________________________________________"
     echo ""
@@ -108,6 +109,22 @@ function grayMessage() {
 
     fi
 
-       if [ "$num" = "2" ]; then
+   
+
+    if [ "$num" = "2" ]; then
+magentaMessage "Danger! You are about to uninstall Mailcow!"
+yellowMessage "To uninstall write 'uninstall mailcow' in the console."
+
+read -p "-> " mailcow_uninstaller
+echo ""
+
+if [ "$mailcow_uninstaller" = "uninstall mailcow" ]; then
+yellowMessage "The uninstaller is under development!"
+greenMessage "Thanks for use my Script!"
+fi
+
+fi
+    
+    if [ "$num" = "3" ]; then
     exit 0
-       fi    
+       fi
