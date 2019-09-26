@@ -140,8 +140,8 @@ fi
     magentaMessage "Der Server wurde erfolgreich geupgradet!"
     echo ""
     cd /opt/mailcow-dockerized/data/web/
-    wget -O - https://github.com/roundcube/roundcubemail/releases/download/1.3.x/roundcubemail-1.3.x-complete.tar.gz | tar xfvz -
-    mv roundcubemail-1.3.x rc
+    wget -O - https://github.com/roundcube/roundcubemail/releases/download/1.4-rc2/roundcubemail-1.4-rc2-complete.tar.gz | tar xfvz -
+    mv roundcubemail-1.4-rc2-complete.tar.gz rc
     chown -R root: rc/
     wget https://get.install-helper.de/mailcow-installer/roundcube/config-roundcube.zip
     apt install unzip zip -y
