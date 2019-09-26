@@ -32,9 +32,11 @@ function grayMessage() {
 	yellowMessage "        YouTube: https://youtube.com/c/MinenIntros          "
     kekMessage "#/////////////////////////////////////////////////////#"
     yellowMessage "      Mailcow Installer by MinenIntros Systems       "
-    yellowMessage "        Version 1.1 - Stable - for Debian 9          "
+    yellowMessage "        Version 1.2 - Stable - for Debian 9          "
 	kekMessage "#/////////////////////////////////////////////////////#"
     magentaMessage "Warning: Currently there are errors with Hetzner Cloud Server!"
+    kekMessage "#/////////////////////////////////////////////////////#"
+    greenMessage "        New: Roundcube installer for mailcow         "
     kekMessage "#/////////////////////////////////////////////////////#"
     sleep 3.0
 
@@ -42,15 +44,16 @@ function grayMessage() {
     echo ""
     whiteMessage "______________________________________________________"
     echo ""
-    magentaMessage "1.  Starte Installer"
-    magentaMessage "2.  Starte Uninstaller"
-    magentaMessage "3.  Verlasse Installer"
+    magentaMessage "1.  Start installer"
+    magentaMessage "2.  Start uninstaller"
+    magentaMessage "3.  Install roundcube to mailcow"
+    magentaMessage "3.  Leave installer"
     echo ""
     whiteMessage "______________________________________________________"
     echo ""
-    read -p "Welche Funktion möchtest du triggern?: " num
+    read -p "Which function do you want to trigger?: " mailcow_installer_function
 
-       if [ "$num" = "1" ]; then
+       if [ "$mailcow_installer_function" = "1" ]; then
 
     clear
     clear
@@ -111,7 +114,7 @@ function grayMessage() {
 
    
 
-    if [ "$num" = "2" ]; then
+    if [ "$mailcow_installer_function" = "2" ]; then
 magentaMessage "Danger! You are about to uninstall Mailcow!"
 yellowMessage "To uninstall write 'uninstall mailcow' in the console."
 
@@ -125,6 +128,35 @@ fi
 
 fi
     
-    if [ "$num" = "3" ]; then
+    if [ "$mailcow_installer_function" = "3" ]; then
+    greenMessage "Dein Server wird geupdated. Bitte Warten!"
+    sleep 2
+    apt-get update
+    magentaMessage "Der Server wurde erfolgreich geupdated!"
+    echo ""
+    greenMessage "Dein Server wird geupgradet. Bitte Warten!"
+    sleep 2
+    apt-get upgrade -y
+    magentaMessage "Der Server wurde erfolgreich geupgradet!"
+    echo ""
+    cd /opt/mailcow-dockerized/data/web/
+    wget -O - https://github.com/roundcube/roundcubemail/releases/download/1.3.x/roundcubemail-1.3.x-complete.tar.gz | tar xfvz -
+    mv roundcubemail-1.3.x rc
+    chown -R root: rc/
+    wget https://get.install-helper.de/mailcow-installer/roundcube/config-roundcube.zip
+    apt install unzip zip -y
+    unzip config-roundcube.zip
+    rm -r config-roundcube.zip
+    cp config-roundcube.php /rc/config/
+    mv config-roundcube.php config.inc.php
+    echo ""
+    yellowMessage "Roundcube installed! Try it with https://subdomain.domain.tld/rc/"
+    greenMessage "Thanks for use my Script!"
+    sleep 5.0
+    clear
+    exit 0
+       fi
+
+    if [ "$mailcow_installer_function" = "4" ]; then
     exit 0
        fi
