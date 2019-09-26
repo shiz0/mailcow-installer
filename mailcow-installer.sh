@@ -148,7 +148,7 @@ fi
     unzip config-roundcube.zip
     rm -r config-roundcube.zip
     mv config-roundcube.php config.inc.php
-    cp config.inc.php rc/
+    mv config.inc.php rc/
 
     echo ""
     yellowMessage "Roundcube installed! Try it with https://subdomain.domain.tld/rc/"
