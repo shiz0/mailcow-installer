@@ -36,8 +36,6 @@ function grayMessage() {
 	kekMessage "#/////////////////////////////////////////////////////#"
     magentaMessage "Warning: Currently there are errors with Hetzner Cloud Server!"
     kekMessage "#/////////////////////////////////////////////////////#"
-    greenMessage "        New: Roundcube installer for mailcow         "
-    kekMessage "#/////////////////////////////////////////////////////#"
     sleep 3.0
 
 
@@ -46,8 +44,7 @@ function grayMessage() {
     echo ""
     magentaMessage "1.  Start installer"
     magentaMessage "2.  Start uninstaller"
-    magentaMessage "3.  Install roundcube to mailcow"
-    magentaMessage "4.  Leave installer"
+    magentaMessage "3.  Leave installer"
     echo ""
     whiteMessage "______________________________________________________"
     echo ""
@@ -128,36 +125,7 @@ fi
 
 fi
     
+
     if [ "$mailcow_installer_function" = "3" ]; then
-    greenMessage "Dein Server wird geupdated. Bitte Warten!"
-    sleep 2
-    apt-get update
-    magentaMessage "Der Server wurde erfolgreich geupdated!"
-    echo ""
-    greenMessage "Dein Server wird geupgradet. Bitte Warten!"
-    sleep 2
-    apt-get upgrade -y
-    magentaMessage "Der Server wurde erfolgreich geupgradet!"
-    echo ""
-    cd /opt/mailcow-dockerized/data/web/
-    wget -O - https://github.com/roundcube/roundcubemail/releases/download/1.4-rc2/roundcubemail-1.4-rc2-complete.tar.gz | tar xfvz -
-    mv roundcubemail-1.4-rc2/ rc
-    chown -R root: rc/
-    wget https://get.install-helper.de/mailcow-installer/roundcube/config-roundcube.zip
-    apt install unzip zip -y
-    unzip config-roundcube.zip
-    rm -r config-roundcube.zip
-    mv config-roundcube.php config.inc.php
-    mv config.inc.php rc/config/
-
-    echo ""
-    yellowMessage "Roundcube installed! Try it with https://subdomain.domain.tld/rc/"
-    greenMessage "Thanks for use my Script!"
-    sleep 5.0
-    clear
-    exit 0
-       fi
-
-    if [ "$mailcow_installer_function" = "4" ]; then
     exit 0
        fi
