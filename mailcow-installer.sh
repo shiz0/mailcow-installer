@@ -147,8 +147,9 @@ fi
     apt install unzip zip -y
     unzip config-roundcube.zip
     rm -r config-roundcube.zip
-    cp config-roundcube.php /rc/config/
     mv config-roundcube.php config.inc.php
+    cp config.inc.php rc/
+
     echo ""
     yellowMessage "Roundcube installed! Try it with https://subdomain.domain.tld/rc/"
     greenMessage "Thanks for use my Script!"
