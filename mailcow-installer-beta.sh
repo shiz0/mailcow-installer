@@ -32,10 +32,8 @@ function grayMessage() {
 	yellowMessage "        YouTube: https://youtube.com/c/MinenIntros          "
     kekMessage "#/////////////////////////////////////////////////////#"
     yellowMessage "      Mailcow Installer by MinenIntros Systems       "
-    yellowMessage "        Version 1.2.6 - Beta - for Debian 9        "
+    yellowMessage "        Version 1.2.7 - Beta - for Debian 9        "
 	kekMessage "#/////////////////////////////////////////////////////#"
-    magentaMessage "Warning: Currently there are errors with Hetzner Cloud Server!"
-    kekMessage "#/////////////////////////////////////////////////////#"
     greenMessage "        New: Roundcube installer for mailcow         "
     kekMessage "#/////////////////////////////////////////////////////#"
     sleep 3.0
@@ -47,7 +45,7 @@ function grayMessage() {
     magentaMessage "1.  Start installer"
     magentaMessage "2.  Start uninstaller"
     magentaMessage "3.  Install roundcube to mailcow"
-    magentaMessage "4.  Leave installer"
+    magentaMessage "6.  Leave installer"
     echo ""
     whiteMessage "______________________________________________________"
     echo ""
@@ -59,60 +57,69 @@ function grayMessage() {
     clear
     clear
 
-    greenMessage "Dein Server wird geupdated. Bitte Warten!"
+    greenMessage "Your server is being updated. Please wait!"
     sleep 2
     apt-get update
-    magentaMessage "Der Server wurde erfolgreich geupdated!"
+    magentaMessage "The server was successfully updated!"
     echo ""
-    greenMessage "Dein Server wird geupgradet. Bitte Warten!"
+    greenMessage "Your server will be upgraded. Please wait!"
     sleep 2
     apt-get upgrade -y
-    magentaMessage "Der Server wurde erfolgreich geupgradet!"
+    magentaMessage "The server has been successfully upgraded!"
     echo ""
     sleep 2
     clear
-    greenMessage "Docker wird installiert"
+    greenMessage "Docker becomes installed"
     curl -sSL https://get.docker.com/ | CHANNEL=stable sh
     systemctl enable docker.service
     systemctl start docker.service
-    magentaMessage "Docker erfolgreich installiert"
+    magentaMessage "Docker successfully installed"
     echo ""
-    greenMessage "Docker Compose wird installiert!"
+    greenMessage "Docker Compose becomes installed"
     curl -L https://github.com/docker/compose/releases/download/$(curl -Ls https://www.servercow.de/docker-compose/latest.php)/docker-compose-$(uname -s)-$(uname -m) > /usr/local/bin/docker-compose
     chmod +x /usr/local/bin/docker-compose
     echo ""
-    yellowMessage "Folgende Docker Compose Version wurde installiert:"
+    yellowMessage "The following Docker Compose version has been installed:"
     docker-compose --version
     echo ""
-    magentaMessage "Docker Compose wurde installiert!"
+    magentaMessage "Docker Compose has been installed!"
     clear
     clear
     clear
-    greenMessage "Mailcow wird jetzt installiert!"
+    greenMessage "Mailcow becomes installed!"
     apt install git -y
     umask
     cd /opt
     git clone https://github.com/mailcow/mailcow-dockerized
     cd mailcow-dockerized
     clear
-    yellowMessage "Sie müssen gleich ihren FQDN angeben (Hostname)."
+    yellowMessage "You must enter your FQDN immediately (host name)."
     sleep 5.5
     ./generate_config.sh
 	sleep 2.0
 	docker-compose pull
 	docker-compose up -d
-    magentaMessage "Mailcow wurde installiert!"
-    clear 3.0
+    magentaMessage "Mailcow installed!"
+    clear
+    echo ""
+    whiteMessage "German:"
     yellowMessage "Wenn Sie einen Reverse-Proxy verwenden möchten, können Sie beispielsweise HTTPS an 127.0.0.1 an Port 8443 und HTTP an 127.0.0.1 an Port 8080 binden."
     whiteMessage "-> nano /opt/mailcow-dockerized/mailcow.conf"
     echo ""
-    greenMessage "Vielen Dank für das Nutzen meines Scriptes!"
+    whiteMessage "English"
+    yellowMessage "Wenn Sie einen Reverse-Proxy verwenden möchten, können Sie beispielsweise HTTPS an 127.0.0.1 an Port 8443 und HTTP an 127.0.0.1 an Port 8080 binden."
+    whiteMessage "-> nano /opt/mailcow-dockerized/mailcow.conf"
+    echo ""
+    greenMessage "Thanks for using my script!"
+    echo ""
+    whiteMessage "Webinterface: https://fqdn.domain.tld"
+    whiteMessage "Username: admin"
+    whiteMessage "Password: moohoo (Change this!)"
     sleep 2.5
+    echo ""
     exit 0
 
     fi
-
-   
 
     if [ "$mailcow_installer_function" = "2" ]; then
 magentaMessage "Danger! You are about to uninstall Mailcow!"
@@ -123,21 +130,21 @@ echo ""
 
 if [ "$mailcow_uninstaller" = "uninstall mailcow" ]; then
 yellowMessage "The uninstaller is under development!"
-greenMessage "Thanks for use my Script!"
+greenMessage "Thanks for using my script!"
 fi
 
 fi
     
     if [ "$mailcow_installer_function" = "3" ]; then
-    greenMessage "Dein Server wird geupdated. Bitte Warten!"
+    greenMessage "Your server is being updated. Please wait!"
     sleep 2
     apt-get update
-    magentaMessage "Der Server wurde erfolgreich geupdated!"
+    magentaMessage "The server was successfully updated!"
     echo ""
-    greenMessage "Dein Server wird geupgradet. Bitte Warten!"
+    greenMessage "Your server will be upgraded. Please wait!"
     sleep 2
     apt-get upgrade -y
-    magentaMessage "Der Server wurde erfolgreich geupgradet!"
+    magentaMessage "The server has been successfully upgraded!"
     echo ""
     cd /opt/mailcow-dockerized/data/web/
     wget -O - https://github.com/roundcube/roundcubemail/releases/download/1.4-rc2/roundcubemail-1.4-rc2-complete.tar.gz | tar xfvz -
@@ -149,12 +156,19 @@ fi
     rm -r config-roundcube.zip
     mv config-roundcube.php config.inc.php
     mv config.inc.php rc/config/
+    clear
 
     echo ""
-    yellowMessage "Roundcube installed! Try it with https://subdomain.domain.tld/rc/"
+    yellowMessage "Roundcube installed!"
+    echo ""
+    magentaMessage "Important note!"
+    yellowMessage "You must now complete the installation at: https://subdomain.domain.tld/rc/install/"
+    echo ""
+    whiteMessage "After completing the installation, execute the following command: rm -r /opt/mailcow-dockerized/data/web/rc/installer"
+    echo ""
     greenMessage "Thanks for use my Script!"
     sleep 5.0
-    clear
+    
     exit 0
        fi
 
