@@ -46,7 +46,7 @@ function grayMessage() {
     magentaMessage "2.  Start uninstaller"
     magentaMessage "3.  Install roundcube to mailcow"
     echo ""
-    magentaMessage "6.  Leave installer"
+    magentaMessage "4.  Leave installer"
     echo ""
     whiteMessage "______________________________________________________"
     echo ""

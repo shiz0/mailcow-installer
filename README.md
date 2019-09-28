@@ -1,5 +1,5 @@
 # mailcow-installer
-<hr >
+
 A open source mailcow installer made by MinenIntros Systems
 
 **One-Line-Install:**
