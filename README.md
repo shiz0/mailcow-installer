@@ -1,5 +1,4 @@
 # mailcow-installer
-**Currently there are errors with Hetzner Cloud Server!**
 <hr >
 A open source mailcow installer made by MinenIntros Systems
 
