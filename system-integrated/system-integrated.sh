@@ -57,6 +57,7 @@ function grayMessage() {
         yellowMessage "To use the Mailcow installer, execute the following command:"
         whiteMessage "Command:  mailcow-installer"
         echo ""
+	exit 0
 
     if [ "$mailcow_installer_function" = "2" ]; then
         wget https://get.install-helper.de/mailcow-installer/system-integrated/deactivate.sh
