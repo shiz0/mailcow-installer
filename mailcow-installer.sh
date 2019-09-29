@@ -34,7 +34,7 @@ function grayMessage() {
     yellowMessage "      Mailcow Installer by MinenIntros Systems       "
     yellowMessage "        Version 1.2.5 - Stable - for Debian 9        "
 	kekMessage "#/////////////////////////////////////////////////////#"
-    magentaMessage "Important! Before you install on a Hetzner Cloud server: https://bit.ly/hetzner-cloud-mailcow"
+    yellowMessage "Important! Before you install on a Hetzner Cloud server: https://bit.ly/hetzner-cloud-mailcow"
     kekMessage "#/////////////////////////////////////////////////////#"
     sleep 3.0
 
