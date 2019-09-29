@@ -28,13 +28,13 @@ function grayMessage() {
     clear
     sleep 1.0
     kekMessage "#/////////////////////////////////////////////////////#"
-	yellowMessage "                   MinenIntros Systems                      "
-	yellowMessage "        YouTube: https://youtube.com/c/MinenIntros          "
+	whiteMessage "                   MinenIntros Systems                      "
+	whiteMessage "        YouTube: https://youtube.com/c/MinenIntros          "
     kekMessage "#/////////////////////////////////////////////////////#"
-    yellowMessage "      Mailcow Installer by MinenIntros Systems       "
-    yellowMessage "        Version 1.2.5 - Stable - for Debian 9        "
+    whiteMessage "      Mailcow Installer by MinenIntros Systems       "
+    whiteMessage "        Version 1.2.5 - Stable - for Debian 9        "
 	kekMessage "#/////////////////////////////////////////////////////#"
-    yellowMessage "Important! Before you install on a Hetzner Cloud server: https://bit.ly/hetzner-cloud-mailcow"
+    greenMessage "Important! Before you install on a Hetzner Cloud server: https://bit.ly/hetzner-cloud-mailcow"
     kekMessage "#/////////////////////////////////////////////////////#"
     sleep 3.0
 
