@@ -1,5 +1,5 @@
 # mailcow-installer
-Before you install on a Hetzner cloud server: https://bit.ly/hetzner-cloud
+Before you install on a Hetzner cloud server: https://bit.ly/hetzner-cloud-mailcow
 <hr >
 A open source mailcow installer made by MinenIntros Systems
 
