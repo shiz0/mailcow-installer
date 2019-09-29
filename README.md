@@ -2,7 +2,7 @@
 
 A open source mailcow installer made by MinenIntros Systems
 
-**One-Line-Install:**
-> git clone https://github.com/MinenIntros/mailcow-installer/ && cd mailcow-installer/system-integrated/ && chmod 755 system-integrated.sh && sed -i -e 's/\r$//' system-integrated.sh && ./system-integrated.sh
+**One-Line-Install (system-integrated):**
+> wget http://get.install-helper.de/mailcow-installer/one-line-installer.sh && chmod 755 one-line-installer.sh && sed -i -e 's/\r$//' one-line-installer.sh && ./one-line-installer.sh
 
 ![](https://minenintros-storage.de/images/github/mailcow-installer/minenintro_x_mailcow.png)
