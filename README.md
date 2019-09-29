@@ -9,10 +9,10 @@ A open source mailcow installer made by MinenIntros Systems
 
 **Minimum System Resources:**
 
-       CPU:          1 GHz
-       RAM:          2 GiB + Swap (better: 4 GiB and more + Swap)
-       Disk:         15 GiB (without emails)
-       System Type:	x86_64
+>       CPU:          1 GHz
+>       RAM:          2 GiB + Swap (better: 4 GiB and more + Swap)
+>       Disk:         15 GiB (without emails)
+>       System Type:	 x86_64
 <hr >
 
 ![](https://minenintros-storage.de/images/github/mailcow-installer/minenintro_x_mailcow.png)
