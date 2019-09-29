@@ -45,7 +45,6 @@ function grayMessage() {
     echo ""
     magentaMessage "1.  Start installer"
     magentaMessage "2.  Start uninstaller"
-    echo ""
     magentaMessage "3.  Leave installer"
     echo ""
     whiteMessage "______________________________________________________"
