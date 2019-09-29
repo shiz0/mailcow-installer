@@ -33,7 +33,9 @@ function grayMessage() {
     kekMessage "#/////////////////////////////////////////////////////#"
     yellowMessage "      Mailcow Installer by MinenIntros Systems       "
     yellowMessage "        Version 1.2.7 - Beta - for Debian 9        "
-	kekMessage "#/////////////////////////////////////////////////////#"
+    kekMessage "#/////////////////////////////////////////////////////#"
+    magentaMessage "Important! Before you install on a Hetzner Cloud server: https://bit.ly/hetzner-cloud-mailcow"
+    kekMessage "#/////////////////////////////////////////////////////#"
     greenMessage "        New: Roundcube installer for mailcow         "
     kekMessage "#/////////////////////////////////////////////////////#"
     sleep 3.0
@@ -45,7 +47,6 @@ function grayMessage() {
     magentaMessage "1.  Start installer"
     magentaMessage "2.  Start uninstaller"
     magentaMessage "3.  Install roundcube to mailcow"
-    echo ""
     magentaMessage "4.  Leave installer"
     echo ""
     whiteMessage "______________________________________________________"
