@@ -35,7 +35,8 @@ function grayMessage() {
     whiteMessage "        Version 1.2.5 - Stable - for Debian 9        "
 	kekMessage "#/////////////////////////////////////////////////////#"
     greenMessage "Important! Before you install on a Hetzner Cloud server:"
-    greenMessage "https://bit.ly/hetzner-cloud-mailcow"
+    greenMessage "        https://bit.ly/hetzner-cloud-mailcow            "
+    kekMessage "#/////////////////////////////////////////////////////#"
     sleep 3.0
 
 
