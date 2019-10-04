@@ -37,6 +37,8 @@ function grayMessage() {
     greenMessage "Important! Before you install on a Hetzner Cloud server:"
     greenMessage "        https://bit.ly/hetzner-cloud-mailcow            "
     kekMessage "#/////////////////////////////////////////////////////#"
+    whiteMessage "                © MinenIntros Systems               "
+    kekMessage "#/////////////////////////////////////////////////////#"
     sleep 3.0
 
 
