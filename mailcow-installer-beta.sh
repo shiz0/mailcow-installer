@@ -39,6 +39,8 @@ function grayMessage() {
     kekMessage "#/////////////////////////////////////////////////////#"
     greenMessage "        New: Roundcube installer for mailcow         "
     kekMessage "#/////////////////////////////////////////////////////#"
+    whiteMessage "                 © MinenIntros Systems              "
+    kekMessage "#/////////////////////////////////////////////////////#"
     sleep 3.0
 
 
