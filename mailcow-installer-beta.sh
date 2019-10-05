@@ -32,7 +32,7 @@ function grayMessage() {
 	yellowMessage "        YouTube: https://youtube.com/c/MinenIntros          "
     kekMessage "#/////////////////////////////////////////////////////#"
     yellowMessage "      Mailcow Installer by MinenIntros Systems       "
-    yellowMessage "        Version 1.2.7 - Beta - for Debian 9        "
+    yellowMessage "        Version 1.2.8 - Beta - for Debian 9        "
 	kekMessage "#/////////////////////////////////////////////////////#"
     greenMessage "        New: Roundcube installer for mailcow         "
     kekMessage "#/////////////////////////////////////////////////////#"
@@ -130,8 +130,16 @@ read -p "-> " mailcow_uninstaller
 echo ""
 
 if [ "$mailcow_uninstaller" = "uninstall mailcow" ]; then
-yellowMessage "The uninstaller is under development!"
-greenMessage "Thanks for using my script!"
+cd /opt/mailcow-dockerized/
+docker-compose down -v --rmi all --remove-orphans
+rm -r /opt/mailcow-dockerized/
+rm -r /opt/containerd/
+sleep 2.5
+clear
+yellowMessage "Mailcow uninstalled!"
+greenMessage "Thanks for use my Script!"
+sleep 5.0    
+exit 0
 fi
 
 fi
