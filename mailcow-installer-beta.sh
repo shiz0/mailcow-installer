@@ -114,7 +114,7 @@ function grayMessage() {
     whiteMessage "-> nano /opt/mailcow-dockerized/mailcow.conf"
     echo ""
     whiteMessage "English"
-    yellowMessage "Wenn Sie einen Reverse-Proxy verwenden möchten, können Sie beispielsweise HTTPS an 127.0.0.1 an Port 8443 und HTTP an 127.0.0.1 an Port 8080 binden."
+    yellowMessage "For example, if you want to use a reverse proxy, you can bind HTTPS to 127.0.0.1 on port 8443 and HTTP to 127.0.0.1 on port 8080."
     whiteMessage "-> nano /opt/mailcow-dockerized/mailcow.conf"
     echo ""
     greenMessage "Thanks for using my script!"
