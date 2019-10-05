@@ -32,9 +32,19 @@ function grayMessage() {
 	yellowMessage "        YouTube: https://youtube.com/c/MinenIntros          "
     kekMessage "#/////////////////////////////////////////////////////#"
     yellowMessage "      Mailcow Installer by MinenIntros Systems       "
+<<<<<<< HEAD
     yellowMessage "        Version 1.2.8 - Beta - for Debian 9        "
 	kekMessage "#/////////////////////////////////////////////////////#"
+=======
+    yellowMessage "        Version 1.2.7 - Beta - for Debian 9        "
+    kekMessage "#/////////////////////////////////////////////////////#"
+    greenMessage "Important! Before you install on a Hetzner Cloud server:"
+    greenMessage "        https://bit.ly/hetzner-cloud-mailcow            "
+    kekMessage "#/////////////////////////////////////////////////////#"
+>>>>>>> c7f715d07240edafc2dfb0b7a8000b283a89b007
     greenMessage "        New: Roundcube installer for mailcow         "
+    kekMessage "#/////////////////////////////////////////////////////#"
+    whiteMessage "                 © MinenIntros Systems              "
     kekMessage "#/////////////////////////////////////////////////////#"
     sleep 3.0
 
@@ -45,7 +55,6 @@ function grayMessage() {
     magentaMessage "1.  Start installer"
     magentaMessage "2.  Start uninstaller"
     magentaMessage "3.  Install roundcube to mailcow"
-    echo ""
     magentaMessage "4.  Leave installer"
     echo ""
     whiteMessage "______________________________________________________"
@@ -89,6 +98,8 @@ function grayMessage() {
     clear
     greenMessage "Mailcow becomes installed!"
     apt install git -y
+    apt purge postfix -y
+    netstat -tulpn | grep -E -w '25|80|110|143|443|465|587|993|995'
     umask
     cd /opt
     git clone https://github.com/mailcow/mailcow-dockerized
@@ -123,26 +134,26 @@ function grayMessage() {
     fi
 
     if [ "$mailcow_installer_function" = "2" ]; then
-magentaMessage "Danger! You are about to uninstall Mailcow!"
-yellowMessage "To uninstall write 'uninstall mailcow' in the console."
+    magentaMessage "Danger! You are about to uninstall Mailcow!"
+    yellowMessage "To uninstall write 'uninstall mailcow' in the console."
 
-read -p "-> " mailcow_uninstaller
-echo ""
+    read -p "-> " mailcow_uninstaller
+    echo ""
 
-if [ "$mailcow_uninstaller" = "uninstall mailcow" ]; then
-cd /opt/mailcow-dockerized/
-docker-compose down -v --rmi all --remove-orphans
-rm -r /opt/mailcow-dockerized/
-rm -r /opt/containerd/
-sleep 2.5
-clear
-yellowMessage "Mailcow uninstalled!"
-greenMessage "Thanks for use my Script!"
-sleep 5.0    
-exit 0
-fi
+    if [ "$mailcow_uninstaller" = "uninstall mailcow" ]; then
+    cd /opt/mailcow-dockerized/
+    docker-compose down -v --rmi all --remove-orphans
+    rm -r /opt/mailcow-dockerized/
+    rm -r /opt/containerd/
+    sleep 2.5
+    clear
+    yellowMessage "Mailcow uninstalled!"
+    greenMessage "Thanks for use my Script!"
+    sleep 5.0    
+    exit 0
+    fi
 
-fi
+    fi
     
     if [ "$mailcow_installer_function" = "3" ]; then
     greenMessage "Your server is being updated. Please wait!"

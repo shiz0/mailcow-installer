@@ -28,13 +28,16 @@ function grayMessage() {
     clear
     sleep 1.0
     kekMessage "#/////////////////////////////////////////////////////#"
-	yellowMessage "                   MinenIntros Systems                      "
-	yellowMessage "        YouTube: https://youtube.com/c/MinenIntros          "
+	whiteMessage "                   MinenIntros Systems                      "
+	whiteMessage "        YouTube: https://youtube.com/c/MinenIntros          "
     kekMessage "#/////////////////////////////////////////////////////#"
-    yellowMessage "      Mailcow Installer by MinenIntros Systems       "
-    yellowMessage "        Version 1.2.4 - Stable - for Debian 9        "
+    whiteMessage "      Mailcow Installer by MinenIntros Systems       "
+    whiteMessage "        Version 1.2.6 - Stable - for Debian 9        "
 	kekMessage "#/////////////////////////////////////////////////////#"
-    magentaMessage "Warning: Currently there are errors with Hetzner Cloud Server!"
+    greenMessage "Important! Before you install on a Hetzner Cloud server:"
+    greenMessage "        https://bit.ly/hetzner-cloud-mailcow            "
+    kekMessage "#/////////////////////////////////////////////////////#"
+    whiteMessage "                 © MinenIntros Systems              "
     kekMessage "#/////////////////////////////////////////////////////#"
     sleep 3.0
 
@@ -44,7 +47,6 @@ function grayMessage() {
     echo ""
     magentaMessage "1.  Start installer"
     magentaMessage "2.  Start uninstaller"
-    echo ""
     magentaMessage "3.  Leave installer"
     echo ""
     whiteMessage "______________________________________________________"
@@ -88,6 +90,8 @@ function grayMessage() {
     clear
     greenMessage "Mailcow wird jetzt installiert!"
     apt install git -y
+    apt purge postfix -y
+    netstat -tulpn | grep -E -w '25|80|110|143|443|465|587|993|995'
     umask
     cd /opt
     git clone https://github.com/mailcow/mailcow-dockerized
