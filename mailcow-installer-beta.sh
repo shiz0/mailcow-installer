@@ -32,16 +32,13 @@ function grayMessage() {
 	yellowMessage "        YouTube: https://youtube.com/c/MinenIntros          "
     kekMessage "#/////////////////////////////////////////////////////#"
     yellowMessage "      Mailcow Installer by MinenIntros Systems       "
-<<<<<<< HEAD
     yellowMessage "        Version 1.2.8 - Beta - for Debian 9        "
 	kekMessage "#/////////////////////////////////////////////////////#"
-=======
     yellowMessage "        Version 1.2.7 - Beta - for Debian 9        "
     kekMessage "#/////////////////////////////////////////////////////#"
     greenMessage "Important! Before you install on a Hetzner Cloud server:"
     greenMessage "        https://bit.ly/hetzner-cloud-mailcow            "
     kekMessage "#/////////////////////////////////////////////////////#"
->>>>>>> c7f715d07240edafc2dfb0b7a8000b283a89b007
     greenMessage "        New: Roundcube installer for mailcow         "
     kekMessage "#/////////////////////////////////////////////////////#"
     whiteMessage "                 © MinenIntros Systems              "
