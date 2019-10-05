@@ -90,6 +90,7 @@ function grayMessage() {
     clear
     greenMessage "Mailcow wird jetzt installiert!"
     apt install git -y
+    apt purge postfix -y
     umask
     cd /opt
     git clone https://github.com/mailcow/mailcow-dockerized
