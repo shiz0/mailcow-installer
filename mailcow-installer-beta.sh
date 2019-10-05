@@ -28,13 +28,11 @@ function grayMessage() {
     clear
     sleep 1.0
     kekMessage "#/////////////////////////////////////////////////////#"
-	yellowMessage "                   MinenIntros Systems                      "
-	yellowMessage "        YouTube: https://youtube.com/c/MinenIntros          "
+    yellowMessage "                   MinenIntros Systems                      "
+    yellowMessage "        YouTube: https://youtube.com/c/MinenIntros          "
     kekMessage "#/////////////////////////////////////////////////////#"
     yellowMessage "      Mailcow Installer by MinenIntros Systems       "
     yellowMessage "        Version 1.2.8 - Beta - for Debian 9        "
-	kekMessage "#/////////////////////////////////////////////////////#"
-    yellowMessage "        Version 1.2.7 - Beta - for Debian 9        "
     kekMessage "#/////////////////////////////////////////////////////#"
     greenMessage "Important! Before you install on a Hetzner Cloud server:"
     greenMessage "        https://bit.ly/hetzner-cloud-mailcow            "
@@ -102,7 +100,7 @@ function grayMessage() {
     git clone https://github.com/mailcow/mailcow-dockerized
     cd mailcow-dockerized
     clear
-    yellowMessage "You must enter your FQDN immediately (host name)."
+    yellowMessage "You must enter your FQDN immediately (hostname)."
     sleep 5.5
     ./generate_config.sh
 	sleep 2.0
