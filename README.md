@@ -18,4 +18,4 @@ A open source mailcow installer made by MinenIntros Systems
 ![](https://minenintros-storage.de/images/github/mailcow-installer/minenintro_x_mailcow.png)
 
 Disclaimer: 
-MinenIntros Systems haftet nicht für folgen Schäden oder sonstigs.
+MinenIntros Systems is not liable for consequential damage or otherwise. -- MinenIntros Systems haftet nicht für folgen Schäden oder sonstigs.
