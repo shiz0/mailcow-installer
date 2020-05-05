@@ -1,7 +1,7 @@
 # mailcow-installer
 Before you install on a Hetzner cloud server: https://bit.ly/hetzner-cloud-mailcow
 <hr >
-A open source mailcow installer made by MinenIntros Systems
+A open source mailcow installer for Debian 9 made by MinenIntros Systems
 
 **One-Line-Install (system-integrated):**
 > wget https://get.install-helper.de/mailcow-installer/one-line-installer.sh && chmod 755 one-line-installer.sh && sed -i -e 's/\r$//' one-line-installer.sh && ./one-line-installer.sh
@@ -18,4 +18,9 @@ A open source mailcow installer made by MinenIntros Systems
 ![](https://minenintros-storage.de/images/github/mailcow-installer/minenintro_x_mailcow.png)
 
 Disclaimer: 
-MinenIntros Systems is not liable for consequential damage or otherwise. -- MinenIntros Systems haftet nicht für folgen Schäden oder sonstigs.
+MinenIntros Systems is not liable for consequential damage or otherwise. -- MinenIntros Systems haftet nicht für Folgeschäden oder sonstiges.
+
+Links:
+Mailcow: https://mailcow.email/
+Mailcow Docs: https://mailcow.github.io/mailcow-dockerized-docs/
+Mailcow @ Github: https://github.com/mailcow/mailcow-dockerized
