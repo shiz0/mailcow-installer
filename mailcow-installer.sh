@@ -59,10 +59,10 @@ function grayMessage() {
     clear
     clear
 
-    greenMessage "Dein Server wird geupdated. Bitte Warten!"
+    greenMessage "Paketlisten werden geupdated. Bitte Warten!"
     sleep 2
     apt-get update
-    magentaMessage "Der Server wurde erfolgreich geupdated!"
+    magentaMessage "Paketlisten erfolgreich geupdated!"
     echo ""
     greenMessage "Dein Server wird geupgradet. Bitte Warten!"
     sleep 2
